@@ -1,8 +1,0 @@
-exit
-(walk-idla-until-time-n start step 300)
-(require 'idla.core :reload-all) 
-(walk-idla-until-time-n 5)
-(walk-idla-until-time-n 20)
-(require 'idla.core :reload-all) 
-(walk-idla-until-time-n 20)
-exit
