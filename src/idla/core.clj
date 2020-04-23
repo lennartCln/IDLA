@@ -4,7 +4,7 @@
 
 
 (def start  {:t 0 
-             :value [[0 0]]})
+             :value ['(0 0)]})
 
 (defn stopped-random-walk [A]
   "run a random walk until exiting the set A
@@ -20,8 +20,9 @@
         (update      :value #(conj % new-point)))))
 
 (defn walk-idla-until-time-n
-  [process-start step n]
-  (nth (iterate step process-start) n))
+  ([n] (walk-idla-until-time-n start step n))
+  ([process-start step-fn n]
+   (nth (iterate step-fn process-start) n)))
 
 
 
