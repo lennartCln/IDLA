@@ -10,5 +10,10 @@
 
 (defn seq-contains? [coll target] (some #(= target %) coll))
 
+(defn plus
+  "vectorsum of sequences"
+  [& seqs]
+  (apply map + seqs))
+
 
 
