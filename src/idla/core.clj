@@ -19,7 +19,7 @@
     (-> (update idla :t inc)
         (update      :value #(conj % new-point)))))
 
-(defn walk-idla-until-time-n
+(defn walk-idla-until-time
   ([n] (walk-idla-until-time-n start step n))
   ([process-start step-fn n]
    (nth (iterate step-fn process-start) n)))
