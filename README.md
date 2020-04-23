@@ -2,16 +2,18 @@
 
 A light weighted clojure program simulating the 
 internal diffusion limited aggregation (IDLA) process in 
-the two dimensional lattice. \\
+the two dimensional lattice. 
 The origin constitutes the start of this growth model.
 With each step, a random walk starts in the origin and runs until it hits
 an unoccupied lattice point, which will be added to the cluster.
 
 ## Usage
 One can run this program from the leiningen repl,
-'lein repl'
-To get 500 steps of the IDLA process run the function 
-'(walk-idla-until-time 500)'
+```lein repl```
+To get 500 steps of the IDLA process, run the function 
+```(walk-idla-until-time 500)```
+The idla.tools contains a function, which allows to export 
+the simulation as a json. 
 
 ## The Program
 The program is written to give a basic framework. It can easily extended to more 
